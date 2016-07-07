@@ -35,6 +35,7 @@
 		C04B3CE28345477BA797A8FB /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 257E6A48DD0C451EB2B3B31C /* libRCTVideo.a */; };
 		E4BCF41C27B546BD9B862DB9 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD283B412FCB42EF816D6139 /* MaterialIcons.ttf */; };
 		F48768CBA8E84A458598EDC1 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C40C3A7B649C42B793EFD72B /* Foundation.ttf */; };
+		540475B56AC4429DB6B9E4EC /* libRNAudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8515107826E49A5AE178636 /* libRNAudio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,8 @@
 		E18B6C69BA234F42996352DD /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
 		E94EA6E2623C4EFBB474228C /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		E9DCCB3670B14FCA959482DD /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		D94666537D3C4CD69F46BEAF /* RNAudio.xcodeproj */ = {isa = PBXFileReference; name = "RNAudio.xcodeproj"; path = "../node_modules/react-native-audio/ios/RNAudio.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C8515107826E49A5AE178636 /* libRNAudio.a */ = {isa = PBXFileReference; name = "libRNAudio.a"; path = "libRNAudio.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,7 @@
 				157D1DCC809941ACB79305B5 /* libRNVectorIcons.a in Frameworks */,
 				5EA6785CDBAA47218D05BFE3 /* libRCTYouTube.a in Frameworks */,
 				C04B3CE28345477BA797A8FB /* libRCTVideo.a in Frameworks */,
+				540475B56AC4429DB6B9E4EC /* libRNAudio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +368,7 @@
 				9DB5D7B0BBA54F1791D08C22 /* RNVectorIcons.xcodeproj */,
 				E18B6C69BA234F42996352DD /* RCTYouTube.xcodeproj */,
 				3009F2B813604B9190F150CE /* RCTVideo.xcodeproj */,
+				D94666537D3C4CD69F46BEAF /* RNAudio.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -779,6 +784,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Noders_iOS_ReactNative.app/Noders_iOS_ReactNative";
@@ -795,6 +801,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Noders_iOS_ReactNative.app/Noders_iOS_ReactNative";
@@ -815,6 +822,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-video",
+					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 				);
 				INFOPLIST_FILE = Noders_iOS_ReactNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -839,6 +847,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-video",
+					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 				);
 				INFOPLIST_FILE = Noders_iOS_ReactNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -893,6 +902,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-video",
+					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -938,6 +948,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-video",
+					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
