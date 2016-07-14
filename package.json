@@ -20,6 +20,7 @@
     "react-native-fs": "^1.5.1",
     "react-native-http": "github:tradle/react-native-http#834492d",
     "react-native-overlay": "^0.4.2",
+    "react-native-progress": "^3.0.1",
     "react-native-router-flux": "^3.30.2",
     "react-native-sglistview": "^0.3.2",
     "react-native-sound": "^0.8.3",
