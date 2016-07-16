@@ -23,6 +23,7 @@
     "react-native-progress": "^3.0.1",
     "react-native-router-flux": "^3.30.2",
     "react-native-sglistview": "^0.3.2",
+    "react-native-slider": "^0.9.0",
     "react-native-sound": "^0.8.3",
     "react-native-spinkit": "^0.1.2",
     "react-native-tab-navigator": "^0.3.2",

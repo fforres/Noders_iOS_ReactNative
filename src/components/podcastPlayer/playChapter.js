@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { StyleSheet, TouchableHighlight, View, Text } from 'react-native';
 import Fontawesomeicons from 'react-native-vector-icons/FontAwesome';
 import Sound from 'react-native-sound';
+import Slider from 'react-native-slider';
+
 Sound.enableInSilenceMode(true);
 import RNFetchBlob from 'react-native-fetch-blob'
 const FS = RNFetchBlob.fs;
@@ -42,6 +44,15 @@ export default class PlayChapter extends Component {
           playing: true
         }, () => {
           this.state.Audio.play();
+          this.setState({audioCallback : (() => {
+            return setInterval(() => {
+              this.state.Audio.getCurrentTime((e) => {
+                this.setState({currentTime:e});
+                console.log(this.state.currentTime);
+              })
+            }, 1000).bind(this);
+          })()
+          });
         });
       }
     })
@@ -109,7 +120,13 @@ export default class PlayChapter extends Component {
     })()
     return (
         <View style={styles.container}>
-            <Text>{podcast['itunes:duration']}</Text>
+            <View style={styles.sliderContainer}>
+                <Slider
+                    value={this.state.value}
+                    onValueChange={(value) => this.setState({value})}
+                />
+                <Text>Value: {this.state.value}</Text>
+            </View>
             <View style={styles.subContainer}>
                 {currentButton}
                 <TouchableHighlight
@@ -129,6 +146,17 @@ export default class PlayChapter extends Component {
   }
 }
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignSelf: 'stretch',
+  },
+  sliderContainer: {
+    flex: 1,
+    marginLeft: 10,
+    marginRight: 10,
+    alignItems: 'stretch',
+    justifyContent: 'center',
+  },
   subContainer: {
     flex: 1,
     alignItems: 'center',
