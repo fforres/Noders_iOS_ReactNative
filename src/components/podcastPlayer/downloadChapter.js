@@ -33,6 +33,7 @@ export default class DownloadChapter extends Component {
         }
       })
   }
+
   render () {
     const { progress } = this.state;
     const progresBar = (()=>{
